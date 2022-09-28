@@ -31,12 +31,18 @@ while detectar_numero < 0:
     numero = input("Introduce un número positivo: ")
     detectar_numero = detectar_numero_positivo(numero)
 
-#numero_cadena= []
-#numero_cadena= str(detectar_numero)
-#print(numero_cadena)
-
 numero_cadena = [int(x) for x in str(detectar_numero)]
 print(numero_cadena)
+
+#numeros = numero_cadena[-1]
+#print(numeros)
+
+i=1
+for i in numero_cadena:
+    if i < len(numero_cadena):
+        numeros = numero_cadena[:-1-i]
+        i+=1
+        print(numeros)
 
 
 
