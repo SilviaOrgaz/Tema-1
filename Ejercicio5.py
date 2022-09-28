@@ -13,7 +13,7 @@
 #Necesitarás jugar muy bien con los índices y realizar muchas conversiones entre tipos cadenas, números y viceversa
 
 
-
+#Esto es una función que deetcta si es un numero positivo, negativo  o no es un numero.
 def detectar_numero_positivo(numero):
     try:
         numero = int(numero)
@@ -31,6 +31,12 @@ while detectar_numero < 0:
     numero = input("Introduce un número positivo: ")
     detectar_numero = detectar_numero_positivo(numero)
 
+#numero_cadena= []
+#numero_cadena= str(detectar_numero)
+#print(numero_cadena)
+
+numero_cadena = [int(x) for x in str(detectar_numero)]
+print(numero_cadena)
 
 
 
