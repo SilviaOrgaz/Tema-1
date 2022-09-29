@@ -13,7 +13,7 @@ numero_usuario = int(input("Introduzca un numero entre el 1 y el 9:  "))
 
 
 def mult_numero_usuario(numero_usuario, numero_magico):
-    if 0 <= numero_usuario <= 9:
+    if  numero_usuario not in range(0,9):
         print("Error no es un numero entre 1 y 9")
         return False
     elif numero_usuario != int(numero_usuario):
