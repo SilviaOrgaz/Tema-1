@@ -40,7 +40,7 @@ longitud_numero_cadena = len(numero_cadena)
 
 i=0
 for i in range(longitud_numero_cadena):
-    numeros = numero_cadena[-1-i]
+    numeros = numero_cadena[-1-i]*10**i
     i+=1
     print(numeros)
 
