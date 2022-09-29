@@ -18,9 +18,12 @@ def agregar_una_vez(lista, elemento):
         return ValueError
     else:
         lista.append(elemento)
+        print(f"La lista final es  {lista}")
         return lista
 
 lista= [1, 5, -2]
-elementos= int(input("Añade un elemento a la lista: "))
-generar_lista = agregar_una_vez(lista, elementos)
-print(f"La lista final es  {lista}")
+elemento = int(input("Añade un elemento a la lista: "))
+generar_lista = agregar_una_vez(lista, elemento)
+
+
+
