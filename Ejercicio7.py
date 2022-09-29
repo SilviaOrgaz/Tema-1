@@ -13,10 +13,12 @@
 
 
 def agregar_una_vez(lista, elemento):
-    lista.append(elemento)
-    #for elemento in lista:
-        #print
-    return lista
+    if elemento in lista:
+        print("Este elemento está repetido")
+        return ValueError
+    else:
+        lista.append(elemento)
+        return lista
 
 lista= [1, 5, -2]
 elementos= int(input("Añade un elemento a la lista: "))
