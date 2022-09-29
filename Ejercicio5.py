@@ -28,7 +28,7 @@ def detectar_numero_positivo(numero):
 
 detectar_numero=-1
 while detectar_numero < 0:
-    numero = input("Introduce un número positivo: ")
+    numero = input("Introduce un número positivnnnnnno: ")
     detectar_numero = detectar_numero_positivo(numero)
 
 numero_cadena = [int(x) for x in str(detectar_numero)]
