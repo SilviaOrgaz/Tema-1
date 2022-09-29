@@ -12,17 +12,24 @@
 #elementos = [1, 5, -2]
 
 
+from multiprocessing.dummy import Value
+
+
 def agregar_una_vez(lista, elemento):
     if elemento in lista:
-        print(f"Error: Imposible añadir elementos suplicados => {elemento}")
-        return ValueError
-    else:
+        #print(f"Error: Imposible añadir elementos suplicados => {elemento}")
+        raise ValueError(f"Error: Imposible añadir elementos suplicados => {elemento}")
+    elif elemento == str(elemento):
         lista.append(elemento)
+        print(f"La lista final es  {lista}")
+        return lista
+    else:
+        lista.append(int(elemento))
         print(f"La lista final es  {lista}")
         return lista
 
 lista= [1, 5, -2]
-elemento = int(input("Añade un elemento a la lista: "))
+elemento = input("Añade un elemento a la lista: ")
 generar_lista = agregar_una_vez(lista, elemento)
 
 
