@@ -14,7 +14,7 @@
 
 def agregar_una_vez(lista, elemento):
     if elemento in lista:
-        print("Este elemento está repetido")
+        print(f"Error: Imposible añadir elementos suplicados => {elemento}")
         return ValueError
     else:
         lista.append(elemento)
