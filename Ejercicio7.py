@@ -17,21 +17,23 @@
 
 def agregar_una_vez(lista, elemento):
     if elemento in lista:
-        print(f"Error: Imposible añadir elementos duplicados => {elemento}")
-        #raise ValueError(f"Error: Imposible añadir elementos suplicados => {elemento}")
-        return ValueError
-    elif elemento == str(elemento):
-        lista.append(elemento)
-        return lista
-    else:
-        lista.append(int(elemento))
-        return lista
+        print(f"Error: Imposible añadir elementos duplicados =>{elemento}")
+        #raise ValueError(f"Error: Imposible añadir elementos duplicados => {elemento}")
+    try:
+        if elemento == str(elemento):
+            lista.append(elemento)
+        else:
+            lista.append(int(elemento))
+    except ValueError as e:
+        print(e)
+    return lista
 
 lista= [1, 5, -2]
 generar_lista = agregar_una_vez(lista, 10)
 generar_lista = agregar_una_vez(lista, -2)
 generar_lista = agregar_una_vez(lista, "Hola")
 print(f"La lista final es: {generar_lista}")
+
 
 
 
