@@ -36,13 +36,13 @@ print(numero_cadena)
 
 #numeros = numero_cadena[-1]
 #print(numeros)
+longitud_numero_cadena = len(numero_cadena)
 
-i=1
-for i in numero_cadena:
-    if i < len(numero_cadena):
-        numeros = numero_cadena[:-1-i]
-        i+=1
-        print(numeros)
+i=0
+for i in range(longitud_numero_cadena):
+    numeros = numero_cadena[-1-i]
+    i+=1
+    print(numeros)
 
 
 
