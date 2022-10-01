@@ -15,7 +15,7 @@
 #from multiprocessing.dummy import Value
 
 
-
+#Esta funcion me devuelve ValueError si el elemento está en la lista
 def agregar_una_vez(lista, elemento):
     if elemento in lista:
         #print(f"Error: Imposible añadir elementos duplicados =>{elemento}")
@@ -24,19 +24,19 @@ def agregar_una_vez(lista, elemento):
     return lista
 
 lista= [1, 5, -2]
+elemento = -2
 try:
-    elemento = -2
-    generar_lista = agregar_una_vez(lista, -2)
+    generar_lista = agregar_una_vez(lista, elemento)
 except ValueError:
     print(f"Error: Imposible añadir elementos duplicados => {elemento}")
+elemento = 10
 try:
-    elemento=10
-    generar_lista = agregar_una_vez(lista, 10)
+    generar_lista = agregar_una_vez(lista, elemento)
 except ValueError:
     print(f"Error: Imposible añadir elementos duplicados => {elemento}")
+elemento = "Hola"
 try:
-    elemento = "Hola"
-    generar_lista = agregar_una_vez(lista, "Hola")
+    generar_lista = agregar_una_vez(lista, elemento)
 except ValueError:
     print(f"Error: Imposible añadir elementos duplicados => {elemento}")
 
