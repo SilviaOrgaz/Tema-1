@@ -20,11 +20,11 @@ def detectar_numero_positivo(numero):
     except:
         print("Debes introducir un número")
         return -1
-    if numero >= 0:
+    if numero > 0 and numero < 9999:
         print("Genial")
         return numero
     else:
-        print("Este número no es positivo") 
+        print("Este número no es válido") 
         return -1
 
 detectar_numero=-1
@@ -32,6 +32,7 @@ while detectar_numero == -1:
     numero = input("Introduce un número positivo: ")
     detectar_numero = detectar_numero_positivo(numero)
 
+#Creo una cadena donde cada elemento es un integer del numero
 numero_cadena = [int(x) for x in str(detectar_numero)]
 print(numero_cadena)
 
@@ -41,7 +42,6 @@ print(numero_cadena)
 for i in range(len(numero_cadena)):
     numeros = numero_cadena[-1-i]*10**i
     numeros = '{:04d}'.format(numeros)
-    #numeros.append(i)
     print(numeros)
 
 
