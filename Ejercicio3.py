@@ -27,3 +27,4 @@ def lista_repetir_2(lista_1, lista_2):
 lista = lista_repetir_2(lista_1, lista_2)
 print(lista)
 
+
