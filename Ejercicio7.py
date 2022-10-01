@@ -19,13 +19,13 @@ def agregar_una_vez(lista, elemento):
     if elemento in lista:
         print(f"Error: Imposible añadir elementos duplicados =>{elemento}")
         #raise ValueError(f"Error: Imposible añadir elementos duplicados => {elemento}")
-    try:
-        if elemento == str(elemento):
-            lista.append(elemento)
-        else:
-            lista.append(int(elemento))
-    except ValueError as e:
-        print(e)
+    #try:
+        #if elemento == str(elemento):
+            #lista.append(elemento)
+    else:
+        lista.append(elemento)
+    #except ValueError as e:
+        #print(e)
     return lista
 
 lista= [1, 5, -2]
