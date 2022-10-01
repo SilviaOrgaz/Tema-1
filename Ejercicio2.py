@@ -22,14 +22,13 @@ def mult_numero_usuario(numero_usuario, numero_magico):
     else:
         numero_usuario *= 9
         numero_magico *= numero_usuario 
-        print(f"El numero final es : {numero_magico}")
         return numero_magico
 
-numero_usuario_2 = -1
-while numero_usuario_2 < 0:
+numero_final = -1
+while numero_final == -1:
     numero_usuario = input("Introduzca un numero entre el 1 y el 9:  ")
     numero_final = mult_numero_usuario(numero_usuario, numero_magico)
-    
+print(f"El numero final es : {numero_final}")
 
 
 
