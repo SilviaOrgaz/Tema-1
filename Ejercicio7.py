@@ -20,8 +20,7 @@ def agregar_una_vez(lista, elemento):
     if elemento in lista:
         #print(f"Error: Imposible añadir elementos duplicados =>{elemento}")
         raise ValueError
-    else:
-        lista.append(elemento)
+    lista.append(elemento)
     return lista
 
 lista= [1, 5, -2]
