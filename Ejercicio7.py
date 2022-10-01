@@ -14,7 +14,7 @@
 
 #from multiprocessing.dummy import Value
 
-
+#Para introducir un ValueError hay que cerrar la función con un raise y luego fuera de la función hay que introducir un try y un except.
 #Esta funcion me devuelve ValueError si el elemento está en la lista
 def agregar_una_vez(lista, elemento):
     if elemento in lista:
