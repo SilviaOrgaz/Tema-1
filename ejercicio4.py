@@ -9,4 +9,5 @@
 
 tareas=[[2, "Hacer la cama"], [4, "Recoger la habitacion"], [1, "Subir la persiana"], [3, "Hacer la comida"]]
 print(tareas)
-print(sorted(tareas, key=lambda x:x[0]))
+tareas_ordenadas = sorted(tareas, key = lambda x:x[0])
+print(tareas_ordenadas)
