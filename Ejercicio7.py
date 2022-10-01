@@ -14,7 +14,7 @@
 
 #from multiprocessing.dummy import Value
 
-import sys
+
 
 def agregar_una_vez(lista, elemento):
     if elemento in lista:
@@ -26,11 +26,20 @@ def agregar_una_vez(lista, elemento):
 
 lista= [1, 5, -2]
 try:
+    elemento = -2
     generar_lista = agregar_una_vez(lista, -2)
 except ValueError:
-    print(f"Error: Imposible añadir elementos duplicados => -2")
-generar_lista = agregar_una_vez(lista, 10)
-generar_lista = agregar_una_vez(lista, "Hola")
+    print(f"Error: Imposible añadir elementos duplicados => {elemento}")
+try:
+    elemento=10
+    generar_lista = agregar_una_vez(lista, 10)
+except ValueError:
+    print(f"Error: Imposible añadir elementos duplicados => {elemento}")
+try:
+    elemento = "Hola"
+    generar_lista = agregar_una_vez(lista, "Hola")
+except ValueError:
+    print(f"Error: Imposible añadir elementos duplicados => {elemento}")
 
 print(f"La lista final es: {generar_lista}")
 
