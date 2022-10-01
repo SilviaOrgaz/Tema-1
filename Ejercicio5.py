@@ -22,13 +22,14 @@ def detectar_numero_positivo(numero):
         return -1
     if numero >= 0:
         print("Genial")
+        return numero
     else:
-        print("Este número no es positivo")  
-    return numero
+        print("Este número no es positivo") 
+        return -1
 
 detectar_numero=-1
-while detectar_numero < 0:
-    numero = input("Introduce un número positivno: ")
+while detectar_numero == -1:
+    numero = input("Introduce un número positivo: ")
     detectar_numero = detectar_numero_positivo(numero)
 
 numero_cadena = [int(x) for x in str(detectar_numero)]
