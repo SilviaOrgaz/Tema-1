@@ -19,21 +19,18 @@ import sys
 def agregar_una_vez(lista, elemento):
     if elemento in lista:
         #print(f"Error: Imposible añadir elementos duplicados =>{elemento}")
-        #raise ValueError
-        raise ValueError(f"Error: Imposible añadir elementos duplicados => {elemento}")
+        raise ValueError
     else:
         lista.append(elemento)
-    #except ValueError as e:
-        #print(e)
     return lista
 
 lista= [1, 5, -2]
 try:
     generar_lista = agregar_una_vez(lista, -2)
 except ValueError:
-    print(f"No se puede hacer")
+    print(f"Error: Imposible añadir elementos duplicados => -2")
 generar_lista = agregar_una_vez(lista, 10)
-#generar_lista = agregar_una_vez(lista, "Hola")
+generar_lista = agregar_una_vez(lista, "Hola")
 
 print(f"La lista final es: {generar_lista}")
 
